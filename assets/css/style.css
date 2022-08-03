@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* .card-body{
+    width: 350px;
+    height: 350px;
+} */
+.post{
+    overflow: hidden;
+    height: 350px;
+    /* width: 350px; */
+    position: relative;
+    object-fit: cover;
+}
+.img-fluid{
+    width: 100%;
+    height: 100%;
+}
+figcaption{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    text-transform: capitalize;
+    color: #fff;
+    transform: scale(0);
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease-in-out;
+}
+.post:hover figcaption{
+    width: 100%;
+    transform: scale(1);
+}
+.id, .albumId{
+    position: absolute;
+    top: 5px;
+    /* transform: translate(-50%, -50%); */
+    font-size: 14px;
+    color: #fff;
+    font-weight: 700;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.id{
+    left: 5px;
+}
+.albumId{
+    right: 5px;
+}
+.post:hover .id, .post:hover .albumId{
+    opacity: 1;
+}
